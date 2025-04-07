@@ -1,18 +1,10 @@
-import Button from "./components/button/button";
+import Titolo from "./components/titolo";
 
-function App() {
-  return (
-// ↓ frammento si può scrivere o cosi versione intera <react.Fragment> </react.Fragment> oppure abbreviato  <> </>
-    <> 
-   
-      <h1>Hello World</h1>
-      <Button text="registrati" />
-      <Button text="clicca qui" />
-      <button>
-        cliccaa
-      </button>
-    </>
-  );
-}
+function App(){
+    return (
+ <Titolo />
+    )
+} 
 
 export default App;
+  
