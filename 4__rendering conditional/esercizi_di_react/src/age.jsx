@@ -1,4 +1,4 @@
 function Age({age}) {
-  return  <span>{age}</span>;
+  return  <div>{age}</div>;
 }
 export default Age;
