@@ -2,9 +2,9 @@ import { useState } from "react"
 import CounterDelay from "./counterDisplay";
 import "./style.css"
 
-const Counter= (props)=>{
-    const [contatore, setContatore]=useState(props.start);
-    const reset=props.start
+const Counter= ({start})=>{
+    const [contatore, setContatore]=useState(start);
+    const reset=start
     const iterazione=()=>{
         setContatore(contatore + 1)
     }
