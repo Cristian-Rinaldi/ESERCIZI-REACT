@@ -1,30 +1,27 @@
-import { useState } from "react"
-import CounterDelay from "./counterDisplay";
-import "./style.css"
+import { useEffect, useState } from "react"
+
 
 const Counter= ({start=0})=>{
     const [contatore, setContatore]=useState(start);
-    const reset=start
-    const iterazione=()=>{
-        setContatore(contatore + 1)
-    }
-    return (
-        <div className="container" >
-            <CounterDelay contatore={contatore} />
 
+    const iterazione=()=>{
+        setContatore(contatore + 1);}
+
+        useEffect(()=>{
+            console.log(contatore)
+        },[contatore]);
+    
+    return (
+        
+           <>
+            <h2>contatore {contatore} </h2>
             <div>
             <button onClick={iterazione}> AUMENTA DI 1 </button>
             </div>
-            <div>
-            <button onClick={()=> setContatore(contatore - 1)}  >DECREMENTA DI 1 </button>
-            </div>
+          
+            </>
 
-           <div>
-           <button onClick={()=> setContatore(reset)}  >RESET </button>
-           </div>
-            
-
-        </div>
+       
     )
 }
 
