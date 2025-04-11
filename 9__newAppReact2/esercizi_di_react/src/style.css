@@ -1,0 +1,48 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+main {
+    
+    border: 2px solid black;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: start;
+
+}
+.container p.blu-right{
+    background-color: blue;
+    margin-left: auto;
+  }
+  form{
+    position: relative;
+  }
+  #text{
+    margin-top: 30px;
+    height: 30px;
+    width: 594px;
+    border-radius: 10px;
+    font-style: italic;
+  }
+button{
+    height: 25px;
+    position: absolute;
+    right: 6px;
+    top: 35px;
+    border-radius: 10px;
+}
