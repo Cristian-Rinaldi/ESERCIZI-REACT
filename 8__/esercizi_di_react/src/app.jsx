@@ -1,9 +1,10 @@
-import Titolo from "./titolo";
+import MouseClicker from "./mouseClicker";
+
 
 function App(){
     return(
       <>
-      <Titolo />
+      <MouseClicker />
       </>
     )
 }
