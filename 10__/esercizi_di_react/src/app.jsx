@@ -1,11 +1,8 @@
-import Titolo from "./titolo";
+const App = ()=>{
 
-function App(){
-    return(
-      <>
-      <Titolo />
-      </>
-    )
+
+  return (
+
+  )
 }
-
-export default App;
+export default App 
