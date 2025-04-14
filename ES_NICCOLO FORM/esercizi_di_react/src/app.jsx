@@ -1,61 +1,61 @@
-import EsercizioUseState from "./esercizioUseState";
+// import EsercizioUseState from "./esercizioUseState";
 
-function App(){
-    return(
-      <>
-    <EsercizioUseState />
-      </>
-    )
-}
+// function App(){
+//     return(
+//       <>
+//     <EsercizioUseState />
+//       </>
+//     )
+// }
 
-export default App;
+// export default App;
 
 
 
 //--------------------------------------------------------------------------------------------------------------------------
 
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-// function App() {
-//   const messaggi = [
-//     "Sono Cristian",
-//     "Sono Mario",
-//     "Sono Luca",
-//     "Sono Alfonso",
-//     "Sono Michele",
-//     "Sono Peppe",
-//     "Sono Anna"
-//   ];
+function App() {
+  const messaggi = [
+    "Sono Cristian",
+    "Sono Mario",
+    "Sono Luca",
+    "Sono Alfonso",
+    "Sono Michele",
+    "Sono Peppe",
+    "Sono Anna"
+  ];
 
-//   const [testo, setTesto] = useState("chi sei");
-//   const [mostraBenvenuto, setMostraBenvenuto] = useState(false);
+  const [testo, setTesto] = useState("chi sei");
+  const [mostraBenvenuto, setMostraBenvenuto] = useState(false);
 
-//   const funzioneCambio = () => {
-//     setTesto(messaggi[Math.floor(Math.random() * messaggi.length)]);
-//   };
+  const funzioneCambio = () => {
+    setTesto(messaggi[Math.floor(Math.random() * messaggi.length)]);
+  };
 
-//   // useEffect per mostrare "Benvenuto!" per 3 secondi ogni volta che `testo` cambia
-//   useEffect(() => {
-//     if (testo !== "chi sei") {
-//       setMostraBenvenuto(true);
+  // useEffect per mostrare "Benvenuto!" per 3 secondi ogni volta che `testo` cambia
+  useEffect(() => {
+    if (testo !== "chi sei") {
+      setMostraBenvenuto(true);
 
-//       const timer = setInterval(() => {
-//         setMostraBenvenuto(false)
-//       }, 3000);
-//       return ()=> clearInterval(timer)
-//     }
-//   }, [testo]); // Si attiva ogni volta che `testo` cambia
+      const timer = setInterval(() => {
+        setMostraBenvenuto(false)
+      }, 3000);
+      return ()=> clearInterval(timer)
+    }
+  }, [testo]); // Si attiva ogni volta che `testo` cambia
 
-//   return (
-//     <>
-//       <h2>{testo}</h2>
-//        {mostraBenvenuto && <p>benvenuto!!</p> }
-//       <button onClick={funzioneCambio}>Cambia</button>
-//     </>
-//   );
-// }
+  return (
+    <>
+      <h2>{testo}</h2>
+       {mostraBenvenuto && <p>benvenuto!!</p> }
+      <button onClick={funzioneCambio}>Cambia</button>
+    </>
+  );
+}
 
-// export default App;
+export default App;
 
 
 //-------------------------------------------------------------------------------------------------------------------------------
