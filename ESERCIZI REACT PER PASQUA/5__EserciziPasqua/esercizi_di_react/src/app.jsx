@@ -3,10 +3,12 @@ Crea un componente che mostri un timer che aumenta di 1 ogni secondo. Aggiungi d
 il timer.
 */
 
+import Timer from "./Timer";
 function App(){
+
     return(
       <>
-      
+      <Timer />
       </>
     )
 }
