@@ -1,0 +1,47 @@
+/*Crea un componente TodoList che esegua il rendering di un ultag con un litag per ogni elemento contenuto nella variabile di stato "todos". La variabile di stato "todos" deve essere un array di stringhe. Il componente TodoList deve inoltre contenere un inputtag e aun pulsante. Quando si clicca sul pulsante, il gestore eventi deve aggiungere il valore del tag di input all'array "todos".
+Cancella l'input ogni volta che un oggetto Todo viene aggiunto all'array todos.
+Aggiungere un pulsante "reset" che, se cliccato, cancella l'array delle cose da fare.
+Aggiungi un pulsante "rimuovi" a ogni tag li. Quando cliccato, il gestore eventi dovrebbe rimuovere l'elemento corrispondente dall'array "todos".*/
+import { useState } from "react";
+
+const TodoList = () => {
+  const [todos, setTodos] = useState([]);
+  const [inputValue, setInputValue] = useState("");
+
+  const aggiungi = () => {
+    if (inputValue !== "") {
+      setTodos([...todos, inputValue]);
+      setInputValue("");
+     }
+  };
+  const reset = () => {
+    setTodos([]); 
+  };
+
+const remove=(position)=>{
+    setTodos(todos.filter((value,index)=> index !== position ? value : null))
+}
+  return (
+    <div>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(event) => setInputValue(event.target.value)}
+        placeholder="Scrivi qualcosa..."
+      />
+      <button onClick={aggiungi}>Aggiungi</button>
+      <button onClick={reset}>Reset</button>
+
+
+      <ul>
+        {todos.map((value,index)=>{
+            <li key={index}><button onClick={()=> {remove(index)} }></button> {value}  </li>
+        })}
+       
+     
+      </ul>
+    </div>
+  );
+};
+
+export default TodoList;
