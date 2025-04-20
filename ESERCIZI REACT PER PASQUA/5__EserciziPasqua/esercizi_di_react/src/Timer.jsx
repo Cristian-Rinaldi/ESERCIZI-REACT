@@ -21,7 +21,7 @@ const Timer=()=>{
         return () => clearInterval(interval);
       }, [attivo]);
       
-
+      
 const start = ()=>{
     setAttivo(true)
 }
