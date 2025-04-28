@@ -1,0 +1,11 @@
+div{
+    
+    text-align: center;
+    background-color: white;
+    border: 2px solid red;
+    height: 500px;
+
+}
+h1{
+    cursor: pointer;
+}

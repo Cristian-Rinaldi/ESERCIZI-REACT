@@ -4,15 +4,22 @@ crea una componente NameList che riceva via props un array di nomi e visualizzi 
 
 import NameList from "./NameList";
 
-function App(){
-  const listaNomi = ["cristian", "silvia", "monica", "alfonso", "morena", "mattia", "niccolò"];
+function App() {
+  const listaNomi = [
+    "cristian",
+    "silvia",
+    "monica",
+    "alfonso",
+    "morena",
+    "mattia",
+    "niccolò",
+  ];
 
-
-    return(
-      <>
-     < NameList nomi={listaNomi} />
-      </>
-    )
+  return (
+    <>
+      <NameList nomi={listaNomi} />
+    </>
+  );
 }
 
 export default App;
