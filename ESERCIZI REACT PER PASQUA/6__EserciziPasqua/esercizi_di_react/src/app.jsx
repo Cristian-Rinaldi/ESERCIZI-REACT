@@ -8,16 +8,32 @@ dati dopo il refresh*/
 
 import ContactList from "./ContactList";
 import ContactForm from "./ContactForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 function App(){
-  const [contacts, setContacts]=useState([])
+  const [contacts, setContacts]=useState( JSON.parse(localStorage.getItem("contacts")))
 
 const addContacts= (newContacts)=>{
  setContacts((oldContacts)=>[ ...oldContacts, newContacts])
 }
+ 
+useEffect(() =>{
+
+localStorage.setItem("contacts", JSON.stringify(contacts))
+
+},[contacts])
+
+useEffect(() =>{
+
+const dati= JSON.parse(localStorage.getItem("contacts"))
+setContacts(dati)
+
   
+  },[])
+
+
+
     return(
       <>
     < ContactForm  dati={addContacts} />
