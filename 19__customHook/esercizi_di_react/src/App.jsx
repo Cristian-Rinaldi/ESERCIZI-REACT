@@ -8,6 +8,7 @@ Scrivere il gancio personalizzato useCurrentLocation, che utilizza l'API navigat
 
 import Counter from "./hook x counter/counter";
 import Form from "./hook x form/Form";
+import LocationComponent from "./hook x localizzazione/LocationComponent";
 
 
 
@@ -16,7 +17,7 @@ function App() {
 <div style={{display:"flex",gap:"50px",flexDirection:"column"}}>
 <Counter />
 <Form />
-
+< LocationComponent  />
 
 
 </div>
