@@ -1,0 +1,2 @@
+/*Scrivere il gancio personalizzato useCurrentLocation, che utilizza l'API navigator.geolocation del browser per ottenere la posizione attuale dell'utente tramite il metodo incorporato getCurrentPosition. Il gancio deve restituire la posizione attuale e una funzione per ottenere la posizione attuale, nonché gli stati di errore e di caricamento. I dettagli su come utilizzare questa API sono disponibili qui: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API */
+
