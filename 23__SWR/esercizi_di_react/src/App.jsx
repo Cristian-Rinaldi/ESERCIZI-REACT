@@ -4,12 +4,14 @@ Modificare l'hook useGithubUser in modo che restituisca una funzione per recuper
 Utilizzare SWRConfig per impostare un valore predefinito per la prop fetcher del hook useSWR. */
 
 import GithubUser from "./GithubUser";
+import UserDetail from "./UserDetail";
+import UserList from "./UserList";
+
 
 function App() {
   return (
     <div>
-      <h1>Ricerca utente GitHub</h1>
-      <GithubUser />
+     <UserDetail />
     </div>
   );
 }
