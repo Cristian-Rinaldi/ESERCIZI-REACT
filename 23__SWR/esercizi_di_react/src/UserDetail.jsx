@@ -5,11 +5,10 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const UserDetail = () => {
   const [idUtente, setIdUtente] = useState(""); // Stato per l'ID utente
-  const [triggerFetch, setTriggerFetch] = useState(false); // Stato per attivare la fetch
 
   // Fetch dei dati solo se triggerFetch è true e idUtente è definito
-  const { data, error, isLoading } = useSWR(
-    triggerFetch && idUtente ? `https://jsonplaceholder.typicode.com/users/${idUtente}` : null,
+  const { data, error, isLoading,mutate } = useSWR(
+  idUtente ? `https://jsonplaceholder.typicode.com/users/${idUtente}` : null,
     fetcher
   );
 
@@ -19,7 +18,7 @@ const UserDetail = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (idUtente) {
-      setTriggerFetch(true); // Attiva la fetch quando l'utente preme "Invia"
+     mutate()
     }
   };
 

@@ -19,10 +19,9 @@ function App() {
   const [newMessage, setNewMessage] = useState("");
   const chatEndRef = useRef(null);
 
-  const { data} = useSWR(
+  const {data} = useSWR(
     "https://mocki.io/v1/829eaa1d-3361-44f2-b37c-0331d61eb32b",
-    fetcher,
-    { revalidateOnFocus: false }
+    fetcher
   );
 
   useEffect(() => {
@@ -57,7 +56,9 @@ function App() {
         {messages.map((msg, index) => (
           <Messaggio key={index} text={msg.text} className={msg.className} />
         ))}
+
         <div ref={chatEndRef} />
+        
         <form onSubmit={handleSubmit}>
           <input
             type="text"
